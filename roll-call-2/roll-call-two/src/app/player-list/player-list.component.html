@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let item of players">{{item.text}}
+    <a routerLink="#{{item.id}}" (click)="deleteItem(item)">DEL</a>
+  </li>
+  <input type="text" #newItem>
+  <button (click)="addNewItem(newItem.value); newItem.value=''">Add</button>
+</ul>
